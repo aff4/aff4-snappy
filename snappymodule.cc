@@ -68,7 +68,7 @@ maybe_resize(PyObject *str, size_t expected_size, size_t actual_size)
 	        _PyBytes_Resize(&str, actual_size);
 	        return str;
 	    }
-	    Py_SIZE(str) = actual_size;
+	    Py_SET_SIZE(str, actual_size);
     }
     return str;
 }
